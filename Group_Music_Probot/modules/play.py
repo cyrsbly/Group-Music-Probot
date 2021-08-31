@@ -107,7 +107,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     font = ImageFont.truetype("etc/font.otf", 32)
     draw.text((205, 550), f"Title: {title}", (51, 215, 255), font=font)
     draw.text((205, 590), f"Duration: {duration}", (255, 255, 255), font=font)
-    draw.text((205, 630), f"Bot by @ppnaravxt!", (255, 255, 255), font=font)
+    draw.text((205, 630), f"Bot by @Chimon_nnnnn.", (255, 255, 255), font=font)
     draw.text(
         (205, 670),
         f"Added By: {requested_by}",
@@ -143,14 +143,14 @@ async def playlist(client, message):
             name = song[0]
             usr = song[1].mention(style="md")
             msg += f"\n- {name}"
-            msg += f"\n- Req by {usr}\n"
+            msg += f"\n- Requested by {usr}\n"
     await message.reply_text(msg)
 
 
 # ============================= Settings =========================================
 
 
-def updated_stats(chat, queue, vol=100):
+def updated_stats(chat, queue, vol=200):
     if chat.id in callsmusic.pytgcalls.active_calls:
         # if chat.id in active_chats:
         stats = "Settings of **{}**".format(chat.title)
