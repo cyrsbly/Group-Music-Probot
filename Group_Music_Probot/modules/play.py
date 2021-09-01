@@ -472,7 +472,7 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "<b>Add me as admin of yor group first</b>",
+                        "<b>Add me as admin of yor group first.</b>",
                     )
                     return
 
@@ -713,7 +713,7 @@ async def play(_, message: Message):
         try:
             callsmusic.pytgcalls.join_group_call(chat_id, file_path)
         except:
-            message.reply("Group Call is not connected or I can't join it")
+            message.reply("Group Call is not connected or I can't join it.")
             return
         await message.reply_photo(
             photo="final.png",
@@ -825,7 +825,7 @@ async def ytplay(_, message: Message):
             ],
             [
                  InlineKeyboardButton(text="Bot Updates", url=f"https://t.me/KatarinaMusicBotUpdates"),
-                 InlineKeyboardButton(text="Bot Owner", url=f"https://t.me/ppnaravxt"),
+                 InlineKeyboardButton(text="Bot Owner", url=f"https://t.me/chimon_nnnnn"),
             ],
             [
                 InlineKeyboardButton(text="❌ Close", callback_data="cls")
@@ -1101,7 +1101,7 @@ async def lol_cb(b, cb):
             ],
             [
                     InlineKeyboardButton(text="Mork's Channel", url=f"https://t.me/saibuboo"),
-                    InlineKeyboardButton(text="Bot Owner", url=f"https://t.me/ppnaravxt"),
+                    InlineKeyboardButton(text="Bot Owner", url=f"https://t.me/chimon_nnnnn"),
             ],
             [
                 InlineKeyboardButton(text="❌ Close", callback_data="cls")
@@ -1147,6 +1147,6 @@ async def lol_cb(b, cb):
         await b.send_photo(chat_id,
             photo="final.png",
             reply_markup=keyboard,
-            caption=f"▶️ **Playing** here the song requested by {r_by.mention}.",
+            caption=f"▶️ **Playing** here the **song** requested by `{r_by.mention}`.",
         )
         os.remove("final.png")
